@@ -1,0 +1,27 @@
+{
+  "name": "sim-wallet-ai",
+  "version": "1.0.0",
+  "description": "SIM Wallet — A secure, mobile-first Bitcoin wallet designed for simple BTC storage, sending, receiving, balance management, and transaction tracking with SIM/mobile-based authentication and strong key protection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balmasexy/Sim-Wallet-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Balmasexy/Sim-Wallet-AI/issues"
+  },
+  "homepage": "https://github.com/Balmasexy/Sim-Wallet-AI#readme",
+  "dependencies": {
+    "bip32": "^5.0.1",
+    "bip39": "^3.1.0",
+    "bitcoinjs-lib": "^7.0.1",
+    "tiny-secp256k1": "^2.2.4"
+  }
+}

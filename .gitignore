@@ -1,0 +1,13 @@
+
+# Bitcoin wallet secrets
+**/mnemonic*
+**/seed*
+**/private-key*
+**/*.secret
+.env
+.env.*
+!.env.example
+
+# Node dependencies
+node_modules/
+npm-debug.log*
