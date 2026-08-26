@@ -4,7 +4,9 @@
   "description": "SIM Wallet — A secure, mobile-first Bitcoin wallet designed for simple BTC storage, sending, receiving, balance management, and transaction tracking with SIM/mobile-based authentication and strong key protection.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/server/index.js"
   },
   "repository": {
     "type": "git",
