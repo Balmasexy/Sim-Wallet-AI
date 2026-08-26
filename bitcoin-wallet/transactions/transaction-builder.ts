@@ -7,6 +7,7 @@ export interface TransactionInput {
   txid: string;
   vout: number;
   valueSats: bigint;
+  address: string;
 }
 
 export interface TransactionOutput {
@@ -56,6 +57,7 @@ export function buildUnsignedTransaction(
 
   for (const input of inputs) {
     validateTxid(input.txid);
+    validateAddress(input.address);
 
     if (input.vout < 0) {
       throw new Error("Invalid input index");
@@ -104,9 +106,19 @@ export function buildUnsignedTransaction(
   });
 
   for (const input of inputs) {
+    const script =
+      bitcoin.address.toOutputScript(
+        input.address,
+        bitcoin.networks.testnet
+      );
+
     psbt.addInput({
       hash: input.txid,
       index: input.vout,
+      witnessUtxo: {
+        script,
+        value: input.valueSats,
+      },
     });
   }
 
