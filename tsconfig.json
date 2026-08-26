@@ -9,6 +9,7 @@
     "outDir": "dist"
   },
   "include": [
+    "api/**/*.ts",
     "server/**/*.ts",
     "bitcoin-wallet/**/*.ts"
   ]
